@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="protofolio.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            ;
+        }
+
+        :root {
+            --first-bg-color: #000102;
+            --second-bg-color: #030303;
+            --text-color: #fff;
+            --btn-color: rgb(255, 8, 181);
+
+        }
+
+        .header {
+            background-color: var(--first-bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            min-width: 100vw;
+            padding: 1rem 9%;
+            top: 0%;
+            left: 0%;
+            z-index: 1;
+        }
+
+        .header a {
+            color: var(--text-color);
+
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            width: 45%;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            cursor: default;
+        }
+
+        .navbar {
+            width: 45%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar a {
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        .navbar a:hover {
+            color: var(--btn-color);
+        }
+
+        section {
+            align-items: center;
+            scroll-behavior: smooth;
+            min-height: 100vh;
+        }
+
+        .home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+            padding: 8rem 10% 4rem;
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+        }
+
+        .home-img img {
+            width: 20vw;
+            height: 45vh;
+            border-radius: 60%;
+            animation: floatimage 3s ease-in-out infinite;
+        }
+
+        @keyframes floatimage {
+            0% {
+                transform: translatey(0);
+            }
+
+            50% {
+                transform: translateY(-2rem);
+
+            }
+        }
+
+        .home-img img:hover {
+            box-shadow: 0 0 2rem var(--btn-color);
+        }
+
+        .home-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .home-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .home-content h2 span {
+            color: var(--btn-color)
+        }
+
+        .home-content p {
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .social {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .social a {
+            border: 0.2rem solid var(--btn-color);
+            padding: 0.7rem;
+            border-radius: 50%;
+            margin-bottom: 2rem;
+            color: var(--btn-color);
+            height: 3rem;
+            width: 3rem;
+            font-size: 1.3rem;
+            display: flex;
+        }
+
+        .social a {
+            font-weight: 900;
+            color: var(--btn-color);
+        }
+
+        .social a i:hover {
+            color: var(--second-bg-color)
+        }
+
+        .btn {
+            background-color: var(--btn-color);
+            padding: 0.7rem 2rem;
+            border-radius: 4rem;
+            font-weight: 600;
+            box-shadow: 0 0 30px #5aa9ff;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateX(10px);
+        }
+
+        .about {
+            background-color: var(--second-bg-color);
+            color: #fff;
+            gap: 2rem;
+            margin-top: 8px;
+            padding: 8rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn1 {
+            margin: 10px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 4rem 10%;
+        }
+
+        .about-content {
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .about-content h1 {
+            font-size: 3rem;
+            font-weight: 200;
+        }
+
+        .about-content h1 span {
+            color: var(--btn-color)
+        }
+
+        .about-content h3 {
+            font-weight: 200;
+            margin-bottom: 1rem;
+            font-size: 3em;
+
+        }
+
+        .about-content p {
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        .about-content .btn.small {
+            display: inline-block;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            padding: 0.6rem 1.8rem;
+            position: relative;
+            box-shadow: 0 0 30px #5aa9ff;
+            transition: 0.3s;
+
+        }
+
+        .about-content .btn.small:hover {
+            transform: translatex(10px);
+        }
+
+        .about-img {
+            display: 1;
+            border-radius: 20px;
+        }
+
+        .about-img img {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 2rem;
+            border: 2px solid var(--btn-color);
+            padding: 0.4rem;
+        }
+
+        .myservices {
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+            margin-top: 8px;
+        }
+
+        .myservices {
+            background-color: var(--second-bg-color);
+            color: var(--text-color);
+            padding: 6rem 10%;
+            text-align: center;
+            align-items: center;
+        }
+
+        .myservices .heading {
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+        }
+
+        .myservices .heading span {
+            color: var(--btn-color);
+        }
+
+        .service-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: #0d1b2a;
+            padding: 2rem;
+            border-radius: 1.2rem;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: 0.3s ease;
+
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px var(--btn-color);
+        }
+
+        .service i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4db5ff;
+        }
+
+        .service h2 {
+            margin-bottom: 1rem;
+        }
+
+        .service p {
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .skills {
+            background-color: black;
+            color: var(--text-color);
+            padding-top: 50px;
+            text-align: center;
+            padding-bottom: 20px;
+            margin-top: 8px;
+        }
+
+        .skills h1 {
+            margin-bottom: 80px;
+            font-size: 2.8rem;
+        }
+
+        .skills h1 span {
+            color: var(--btn-color);
+        }
+
+        .skills-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem 5rem;
+            width: 80%;
+            margin: auto;
+        }
+
+        .bars h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .bars {
+            position: relative;
+            margin-bottom: 32px;
+            text-align: left;
+
+        }
+
+        .bars span {
+            float: right;
+            margin-top: -38px;
+            color: var(--text-color);
+        }
+
+        .light-bar {
+            background-color: var(--text-color);
+            border-radius: 8px;
+            height: 8px;
+        }
+
+        .btn-bar {
+            background-color: aqua;
+            border-radius: 8px;
+            height: 8px;
+            margin-top: -8px;
+        }
+
+        .python {
+            width: 90%;
+        }
+
+        .Django {
+            width: 80%;
+        }
+
+        .sql {
+            width: 80%;
+        }
+
+        .c {
+            width: 80%
+        }
+
+        .html {
+            width: 95%;
+        }
+
+        .css {
+            width: 80%;
+        }
+
+        .js {
+            width: 80%;
+
+        }
+
+        .tailwindcss {
+            width: 80%;
+        }
+
+        .span {
+            color: aqua;
+        }
+
+        .contact {
+            width: 100%;
+            padding: 80px 0;
+            background: var(--first-bg-color);
+            text-align: center;
+            margin: 8px;
+        }
+
+        .contact h1 {
+            font-size: 45px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+
+        .contact h1 span {
+            color: var(--btn-color);
+        }
+
+        .contact-form {
+            width: 60%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 18px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: #0d0d0d;
+            color: var(--text-color);
+            font-size: 16px;
+        }
+
+        .contact textarea {
+            height: 200px;
+        }
+
+        .btn.large {
+            display: inline-block;
+            margin: auto;
+            width: 200px;
+            padding: 15px 0;
+            font-size: 18px;
+            background: var(--btn-color);
+            border-radius: 50px;
+            text-decoration: none;
+            color: #fff;
+            box-shadow: 0 0 30px #5aa9ff;
+            transition: 0.3s;
+        }
+
+        .btn.large:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <header class="header">
+            <a href="" class="logo">portfolio</a>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#services">services</a>
+                <a href="#skills">skills</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </header>
+    </nav>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3> myself</h3>
+            <h1>SYED HARSHAD BASHA</h1>
+            <h2>im an <span>Graduate </span></h2>
+            <p>at present im a fresher looking for a godd job and and also want to gain the real world experience.
+                solutions</p>
+            <div class="social">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <a href="#" class="btn">download cv</a>
+        </div>
+        <div class="home-img">
+            <img src="pass.png.jpg" alt="">
+        </div>
+
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="image 1.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <h1>About <span>me</span> </h1>
+                <h3>Frontend developer</h3>
+                <p>Hi, I'm Syed Arshad, an Electronics and Communication Engineer with a strong passion for technology,
+                    programming, and building real-world solutions. I enjoy working on both hardware and software
+                    projects, especially in Embedded Systems, IoT, Python development, and web technologies.</p>
+                <a href="#" class="btn small">read more</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="myservices" id="services">
+        <h1 class="heading">My <span>services</span></h1>
+        <div class="service-container">
+            <div class="service">
+                <i class="fa-solid fa-code"></i>
+                <h2>web Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi beatae, eveniet, esse ducimus,
+                    voluptatibus dolores temporibus pariatur quam asperiores iure recusandae iste quod reiciendis vitae.
+                    Id natus dignissimos aperiam adipisci.</p>
+                <a href="#" class="btn large">Read more</a>
+            </div>
+            <div class="service">
+                <i class="fa-solid fa-database"></i>
+                <h2>Database Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aspernatur porro nemo nisi, neque
+                    quia, in ratione soluta aliquid placeat necessitatibus at voluptatum eius culpa dolores cumque
+                    eos
+                    consequatur? Deleniti?</p>
+                <a href="#" class="btn large">Read more</a>
+            </div>
+            <div class="service">
+                <i class="fa-brands fa-python"></i>
+                <h2>Python Development</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aspernatur porro nemo nisi, neque
+                    quia, in ratione soluta aliquid placeat necessitatibus at voluptatum eius culpa dolores cumque
+                    eos
+                    consequatur? Deleniti?</p>
+                <a href="#" class="btn large">Read more</a>
+            </div>
+        </div>
+    </section>
+    <section class="skills" id="skills">
+        <h1> my <span>skills</span></h1>
+        <div class="skills-content">
+            <div class="bars">
+                <h3>python</h3>
+                <span>90%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar python"></div>
+            </div>
+            <div class="bars">
+                <h3>Django</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar Django"></div>
+            </div>
+            <div class="bars">
+                <h3>sql</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar sql"></div>
+            </div>
+            <div class="bars">
+                <h3>c</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar c"></div>
+            </div>
+            <div class="bars">
+                <h3>Html</h3>
+                <span>95%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar html"></div>
+            </div>
+            <div class="bars">
+                <h3>css</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar css"></div>
+            </div>
+            <div class="bars">
+                <h3>js</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar js"></div>
+            </div>
+            <div class="bars">
+                <h3>Tailwind css</h3>
+                <span>80%</span>
+                <div class="light-bar"></div>
+                <div class="btn-bar tailwindcss"></div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Contact <span>Me</span></h1>
+        <form class="contact-form">
+            <div class="input-box">
+                <input type="text" placeholder="Enter Your Name">
+                <input type="email" placeholder="Enter Your Email">
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Enter Your Mobile">
+                <input type="text" placeholder="Enter Email Subject">
+            </div>
+            <textarea placeholder="Your Message"></textarea>
+            <a href="#" class="btn large">Send Messages</a>
+        </form>
+    </section>
+
+</body>
+
+</html>
